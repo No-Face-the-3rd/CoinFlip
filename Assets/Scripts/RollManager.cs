@@ -130,7 +130,7 @@ public class RollManager : MonoBehaviour {
 
     void HandleCoinToss()
     {
-        if (CoinPrefab && Tosses.Count < NumTosses)
+        if (CoinPrefab && Tosses.Count + CoinsInfo.Count < NumTosses)
         {
             List<TossLocationInfo> NotInUse = TossLocations.FindAll(delegate (TossLocationInfo Info) { return Info.InUse == false; });
             if (NotInUse.Count > 0)
